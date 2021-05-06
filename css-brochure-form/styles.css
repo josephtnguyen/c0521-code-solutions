@@ -52,8 +52,7 @@ select {
 }
 
 div.button {
-  display: flex;
-  justify-content: flex-end;
+  text-align: right;
 }
 
 button {
