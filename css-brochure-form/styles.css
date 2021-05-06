@@ -1,0 +1,70 @@
+form {
+  width: 60%;
+  max-width: 450px;
+  margin: auto;
+}
+
+h3 {
+  font-family: 'Brandon Grotesque', sans-serif;
+  color: rgb(236, 93, 87);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  width: 50%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.prompt {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  margin-left: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+  color: rgb(83, 83, 83);
+}
+
+input.text,
+select {
+  font-size: 1rem;
+  width: 100%;
+  border-color: rgb(183, 183, 183);
+}
+
+input.text {
+  font-family: 'AtlasGrotesk', sans-serif;
+  font-weight: 550;
+  color: rgb(183, 183, 183);
+  padding: 0.6rem 0.6rem;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+select {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: 500;
+  color: rgb(83, 83, 83);
+  background-color: rgb(243, 243, 243);
+  border-radius: 4px;
+  padding: 0.5rem 0.1rem;
+}
+
+div.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: rgb(236, 93, 87);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 0.5rem 1.2rem;
+  margin: 0.6rem 0;
+}
