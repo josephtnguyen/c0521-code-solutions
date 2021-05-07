@@ -15,6 +15,9 @@ body {
 
 .row {
   display: flex;
+}
+
+.justify-space-between {
   justify-content: space-between;
 }
 
@@ -29,8 +32,6 @@ body {
 
 .col-third {
   flex-basis: calc(100% / 3);
-  justify-content: center;
-  margin-top: 0.5rem;
 }
 
 .col-header {
