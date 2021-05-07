@@ -1,0 +1,69 @@
+* {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+}
+
+body {
+  background-color: #1996da;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 750px;
+  margin: 100px auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.header {
+  color: white;
+  text-align: center;
+}
+
+.col-third {
+  flex-basis: calc(100% / 3);
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.col-header {
+  color: white;
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  color: #cde8f7;
+  text-align: center;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0 1.7rem;
+}
+
+.img-container {
+  background-color: white;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+}
