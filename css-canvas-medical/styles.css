@@ -101,7 +101,7 @@ p {
 
 .hero-heading,
 .hero-par {
-  padding-right: 46%;
+  width: 420px;
 }
 
 .hero-heading {
@@ -109,7 +109,7 @@ p {
 }
 
 .hero-par {
-  margin: 0.8rem auto 1.5rem auto;
+  margin: 0.8rem 0 1.5rem 0;
 }
 
 .get-started-button {
