@@ -1,0 +1,192 @@
+* {
+  font-family: Avenir, sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+.col-fourth {
+  flex-basis: 25%;
+}
+
+.header {
+  padding: 1rem 4rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top-logo {
+  width: 100px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: #a4a4a4;
+  font-size: 13px;
+  padding: 0 1.5rem;
+  width: 400px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  color: white;
+  background-color: #294464;
+  border: none;
+  border-radius: 3px;
+}
+
+.contact-button {
+  padding: 0.7rem 0.8rem;
+}
+
+hr {
+  background-color: #edeef0;
+  height: 1px;
+  border: none;
+}
+
+.hero {
+  background-image:
+    linear-gradient(rgba(105, 105, 105, 0.4), rgba(105, 105, 105, 0.4)),
+    url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 450px;
+  margin: 3rem 4rem;
+  padding: 4rem 3rem;
+}
+
+h1,
+h2 {
+  font-family: Tiempos Headline, serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.4rem;
+  margin: 0;
+}
+
+.hero-heading,
+.hero-par {
+  padding-right: 46%;
+}
+
+.hero-heading {
+  line-height: 2.5rem;
+}
+
+.hero-par {
+  margin: 0.8rem auto 1.5rem auto;
+}
+
+.get-started-button {
+  font-size: 17px;
+  font-weight: 550;
+  padding: 0.8rem 2.5rem;
+}
+
+.locations-box {
+  color: #6e6e6e;
+  background-color: #fafafa;
+  text-align: center;
+  padding: 3rem;
+}
+
+.endorse-body {
+  width: 45%;
+  margin: 0.5rem auto;
+}
+
+.locations {
+  margin: 3rem auto;
+  line-height: 2.5rem;
+}
+
+.ready {
+  color: #6e6e6e;
+  margin: 2rem 4rem;
+}
+
+.ready-heading {
+  margin-bottom: 0.6rem;
+}
+
+.get-started {
+  text-align: right;
+  margin: auto 4rem;
+}
+
+.grey {
+  display: flex;
+  color: white;
+  background-color: #525351;
+  padding: 6rem 4rem;
+}
+
+#bottom-logo {
+  width: 100px;
+  margin-bottom: 2.5rem;
+}
+
+address {
+  font-style: normal;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+.grey-heading {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+}
+
+.links {
+  line-height: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+.footer {
+  padding: 3rem 4rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  color: #6e6e6e;
+  font-weight: bold;
+  width: 25%;
+}
