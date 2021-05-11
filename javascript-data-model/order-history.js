@@ -1,9 +1,9 @@
 var orderHistory = [
   {
-    orderNum: [114, 3941689, 8772232],
-    orderDate: [4, 8, 2020],
-    deliverDate: [8, 8, 2020],
-    returnWindow: [7, 9, 2020],
+    orderNum: '114-3941689-8772232',
+    orderDate: 'August 4, 2020',
+    deliverDate: 'Aug 8, 2020',
+    returnWindow: 'Sep 7, 2020',
     shipTo: 'JS Masher',
     handed: false,
     total: 34.00,
@@ -11,20 +11,17 @@ var orderHistory = [
       {
         title: 'JavaScript for impatient programmers',
         price: 31.55,
-        author: {
-          firstName: 'Axel',
-          lastName: 'Rauschmayer',
-          prefix: 'Dr.',
-          suffix: null
+        data: {
+          author: 'Dr. Axel Rauschmayer'
         }
       }
     ]
   },
   {
-    orderNum: [113, 9984268, 1280257],
-    orderDate: [19, 7, 2020],
-    deliverDate: [20, 7, 2020],
-    returnWindow: [19, 8, 2020],
+    orderNum: '113-9984268-1280257',
+    orderDate: 'July 19, 2020',
+    deliverDate: 'Jul 20, 2020',
+    returnWindow: 'Aug 19, 2020',
     shipTo: 'JS Masher',
     handed: true,
     total: 44.53,
@@ -32,20 +29,17 @@ var orderHistory = [
       {
         title: 'The Timeless Way of Building',
         price: 41.33,
-        author: {
-          firstName: 'Christopher',
-          lastName: 'Alexander',
-          prefix: null,
-          suffix: null
+        data: {
+          author: 'Christopher Alexander'
         }
       }
     ]
   },
   {
-    orderNum: [114, 2875557, 9059409],
-    orderDate: [4, 7, 2020],
-    deliverDate: [7, 7, 2020],
-    returnWindow: [5, 8, 2020],
+    orderNum: '114-2875557-9059409',
+    orderDate: 'July 4, 2020',
+    deliverDate: 'Jul 7, 2020',
+    returnWindow: 'Aug 5, 2020',
     shipTo: 'JS Masher',
     handed: true,
     total: 17.22,
@@ -53,15 +47,15 @@ var orderHistory = [
       {
         title: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
         price: 15.98,
-        author: null
+        data: {}
       }
     ]
   },
   {
-    orderNum: [113, 2883177, 2648248],
-    orderDate: [3, 7, 2020],
-    deliverDate: [5, 7, 2020],
-    returnWindow: [4, 8, 2020],
+    orderNum: '113-2883177-2648248',
+    orderDate: 'July 3, 2020',
+    deliverDate: 'Jul 5, 2020',
+    returnWindow: 'Aug 4, 2020',
     shipTo: 'JS Masher',
     handed: false,
     total: 138.93,
@@ -69,16 +63,13 @@ var orderHistory = [
       {
         title: 'GameCube Controller - Super Smash Bros. Edition (Nintendo Switch)',
         price: 94.95,
-        author: null
+        data: {}
       },
       {
         title: 'The Art of Sql',
         price: 33.99,
-        author: {
-          firstName: 'Stephanie',
-          lastName: 'Faroult',
-          prefix: null,
-          suffix: null
+        data: {
+          author: 'Stephanie Faroult'
         }
       }
     ]
