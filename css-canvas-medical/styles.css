@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-#top-logo {
+.top-logo {
   width: 100px;
 }
 
@@ -57,6 +57,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.current-location {
+  color: #184362;
+}
+
 button {
   color: white;
   background-color: #294464;
@@ -75,15 +79,27 @@ hr {
 }
 
 .hero {
-  background-image:
-    linear-gradient(rgba(105, 105, 105, 0.4), rgba(105, 105, 105, 0.4)),
-    url('images/hero.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-size: cover;
   background-position: center;
   color: white;
   height: 450px;
   margin: 3rem 4rem;
   padding: 4rem 3rem;
+}
+
+.hero-home {
+  background-image:
+    linear-gradient(rgba(105, 105, 105, 0.4), rgba(105, 105, 105, 0.4)),
+    url('images/hero.jpg');
+}
+
+.hero-product {
+  background-image:
+    linear-gradient(rgba(105, 105, 105, 0.4), rgba(105, 105, 105, 0.4)),
+    url('images/product/product-header.jpg');
 }
 
 h1,
@@ -116,11 +132,22 @@ p {
   font-size: 17px;
   font-weight: 550;
   padding: 0.8rem 2.5rem;
+  width: 170px;
+}
+
+.gray-text {
+  color: #6e6e6e;
+}
+
+.gray-background {
+  background-color: #fafafa;
+}
+
+.content {
+  padding: 3rem;
 }
 
 .locations-box {
-  color: #6e6e6e;
-  background-color: #fafafa;
   text-align: center;
   padding: 3rem;
 }
@@ -135,8 +162,44 @@ p {
   line-height: 2.5rem;
 }
 
+.center-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.align-right {
+  align-items: flex-end;
+}
+
+.align-left {
+  align-items: flex-start;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-text {
+  width: 75%;
+}
+
+.product-par {
+  margin: 0.5rem 0;
+}
+
+.product-link {
+  color: #184362;
+  margin: 2rem 0;
+}
+
+.quote {
+  font-family: Tiempos Headline, serif;
+  font-style: italic;
+  font-size: 12px;
+}
+
 .ready {
-  color: #6e6e6e;
   margin: 2rem 4rem;
 }
 
@@ -149,14 +212,14 @@ p {
   margin: auto 4rem;
 }
 
-.grey {
+.bottom-details {
   display: flex;
   color: white;
   background-color: #525351;
   padding: 6rem 4rem;
 }
 
-#bottom-logo {
+.bottom-logo {
   width: 100px;
   margin-bottom: 2.5rem;
 }
@@ -167,7 +230,7 @@ address {
   line-height: 20px;
 }
 
-.grey-heading {
+.bottom-heading {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 16px;
