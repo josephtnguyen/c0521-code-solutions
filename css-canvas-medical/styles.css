@@ -268,13 +268,18 @@ p {
 
 .member-block {
   text-align: center;
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 
 .portrait {
   width: 100%;
   border-radius: 50%;
-  padding: 1.5rem;
+  padding: 1rem 3rem;
+}
+
+.about-heading {
+  font-size: 28px;
+  margin: 4rem auto 2rem;
 }
 
 .ready {
