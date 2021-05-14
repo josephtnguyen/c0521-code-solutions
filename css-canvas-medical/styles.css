@@ -19,6 +19,10 @@
   flex-basis: 50%;
 }
 
+.col-third {
+  flex-basis: calc(100% / 3);
+}
+
 .col-fourth {
   flex-basis: 25%;
 }
@@ -106,6 +110,12 @@ hr {
   background-image:
     linear-gradient(rgba(105, 105, 105, 0.4), rgba(105, 105, 105, 0.4)),
     url('images/implementation/implementation-header.jpg');
+}
+
+.hero-about {
+  background-image:
+    linear-gradient(rgba(105, 105, 105, 0.4), rgba(105, 105, 105, 0.4)),
+    url('images/about-us/about-us-header.jpg');
 }
 
 h1,
@@ -235,6 +245,36 @@ p {
 
 .implementation-par {
   margin: 1rem 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.about-believe {
+  width: 500px;
+  margin: auto;
+}
+
+.about-par {
+  line-height: 20px;
+  margin: 0.8rem 0;
+}
+
+.about-link {
+  color: #184362;
+  font-weight: 600;
+}
+
+.member-block {
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.portrait {
+  width: 100%;
+  border-radius: 50%;
+  padding: 1.5rem;
 }
 
 .ready {
