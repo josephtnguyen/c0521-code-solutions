@@ -28,7 +28,7 @@
 }
 
 .header {
-  padding: 1rem 4rem 0.5rem;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,6 +80,7 @@ hr {
   background-color: #edeef0;
   height: 1px;
   border: none;
+  margin: 0;
 }
 
 .hero {
@@ -251,8 +252,8 @@ p {
   text-align: center;
 }
 
-.about-believe {
-  width: 500px;
+.about-textbox {
+  width: 485px;
   margin: auto;
 }
 
@@ -280,6 +281,11 @@ p {
 .about-heading {
   font-size: 28px;
   margin: 4rem auto 2rem;
+}
+
+.board-member {
+  font-size: 14px;
+  line-height: 3rem;
 }
 
 .ready {
