@@ -4,7 +4,7 @@ var h1 = document.querySelector('h1');
 console.log('h1:', h1);
 console.dir(h1);
 
-var explanation = document.getElementById('explanation');
+var explanation = document.querySelector('#explanation');
 console.log('explanation:', explanation);
 console.dir(explanation);
 
