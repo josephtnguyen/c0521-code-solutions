@@ -14,9 +14,9 @@ function handleInput(event) {
   console.log('value of', name, ':', value);
 }
 
-var $name = document.forms[0][0];
-var $email = document.forms[0][1];
-var $message = document.forms[0][2];
+var $name = document.forms[0].querySelector('#user-name');
+var $email = document.forms[0].querySelector('#user-email');
+var $message = document.forms[0].querySelector('#user-message');
 
 $name.addEventListener('focus', handleFocus);
 $name.addEventListener('blur', handleBlur);
