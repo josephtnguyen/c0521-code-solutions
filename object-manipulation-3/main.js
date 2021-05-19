@@ -1,57 +1,78 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 
 function playGame(players, numOfCards) {
-  var deck = [];
-  var ranks = [2, 3, 4, 5, 6, 7, 8, 9, 'jack', 'queen', 'king', 'ace'];
-  var suits = ['spades', 'clubs', 'diamonds', 'hearts'];
+  var deck = makeShuffledDeck();
+  var thisRound = players.slice();
 
-  for (var i = 0; i < ranks.length; i++) {
-    for (var j = 0; j < suits.length; j++) {
-      deck.push({ rank: ranks[i], suit: suits[j] });
+  playRound(thisRound);
+
+  function makeShuffledDeck() {
+    var deck = [];
+    var ranks = [2, 3, 4, 5, 6, 7, 8, 9, 'jack', 'queen', 'king', 'ace'];
+    var suits = ['spades', 'clubs', 'diamonds', 'hearts'];
+
+    for (var i = 0; i < ranks.length; i++) {
+      for (var j = 0; j < suits.length; j++) {
+        deck.push({ rank: ranks[i], suit: suits[j] });
+      }
     }
+    return _.shuffle(deck);
   }
 
-  deck = _.shuffle(deck);
-
-  var thisRound = players;
-  while (thisRound.length > 1) {
+  function playRound(players) {
     var highScore = 0;
     var winner = '';
     var nextRound = [];
 
-    for (i = 0; i < thisRound.length; i++) {
-      console.log('Player\'s turn:', thisRound[i].name);
-      var score = 0;
-      thisRound[i].hand = [];
-      for (j = 0; j < numOfCards; j++) {
-        var topCard = deck.pop();
-        console.log('Card:', topCard.rank, 'of', topCard.suit);
-        if (topCard.rank === 'ace') {
-          score += 11;
-        } else if (typeof (topCard.rank) === 'string') {
-          score += 10;
-        } else {
-          score += topCard.rank;
-        }
-        thisRound[i].hand.push(topCard);
-      }
+    for (var i = 0; i < players.length; i++) {
+      console.log('Player\'s turn:', players[i].name);
+
+      var score = dealPlayerHand(players[i]);
 
       console.log('Score:', score);
-      if (score > highScore) {
-        highScore = score;
-        winner = thisRound[i].name;
-        nextRound = [];
-        nextRound.push(thisRound[i]);
-      } else if (score === highScore) {
-        nextRound.push(thisRound[i]);
-      }
+
+      highScore = checkForNewHighScore(score, highScore);
     }
 
     if (nextRound.length === 1) {
       console.log('The winner is', winner, '!');
-      break;
+
     } else {
-      thisRound = nextRound;
+      logTie();
+      playRound(nextRound);
+    }
+
+    function dealPlayerHand(player) {
+      var totalScore = 0;
+      players[i].hand = [];
+      for (var j = 0; j < numOfCards; j++) {
+        var topCard = deck.pop();
+        console.log('Card:', topCard.rank, 'of', topCard.suit);
+        if (topCard.rank === 'ace') {
+          totalScore += 11;
+        } else if (typeof (topCard.rank) === 'string') {
+          totalScore += 10;
+        } else {
+          totalScore += topCard.rank;
+        }
+        player.hand.push(topCard);
+      }
+      return totalScore;
+    }
+
+    function checkForNewHighScore(score, highScore) {
+      if (score > highScore) {
+        winner = players[i].name;
+        nextRound = [];
+        nextRound.push(players[i]);
+        return score;
+      } else if (score === highScore) {
+        nextRound.push(players[i]);
+        return score;
+      }
+    }
+
+    function logTie() {
       console.log('There is a tie.');
       console.log('The next round will have');
       for (i = 0; i < nextRound.length; i++) {
