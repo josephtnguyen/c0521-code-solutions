@@ -73,6 +73,15 @@ button {
   border-radius: 3px;
 }
 
+button:active {
+  transform: translateY(2px);
+}
+
+button:hover,
+input[type="submit"] {
+  cursor: pointer;
+}
+
 .contact-button {
   padding: 0.7rem 0.8rem;
 }
@@ -306,7 +315,11 @@ p {
   font-weight: 500;
   width: 425px;
   margin: 1.5rem;
-  padding: 0.6rem;
+  padding: 0.6rem 0;
+}
+
+.input-box::placeholder {
+  color: #d8d1d1;
 }
 
 .subscribe-button {
@@ -334,6 +347,39 @@ p {
 .blog-heading {
   color: #0a4265;
   margin: 0.5rem 0;
+}
+
+.contact-touch {
+  padding: 3rem 3.9rem 3rem 0;
+}
+
+.contact-heading {
+  font-size: 30px;
+}
+
+.contact-number {
+  color: #0a4265;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 1.3rem 0;
+}
+
+.contact-par {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.contact-form {
+  padding: 1rem 0;
+}
+
+.submit-button {
+  color: white;
+  background-color: #0a4265;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 0.8rem;
 }
 
 .ready {
