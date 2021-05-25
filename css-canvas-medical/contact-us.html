@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,10 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
+    <!-- Header -->
     <div class="row">
       <div class="col-full header">
         <a href="index.html">
@@ -31,48 +34,50 @@
     </div>
     <hr>
 
-    <div class="row">
-      <div class="col-full hero hero-home">
-        <h1 class="hero-heading">The EMR Reimagined for Primary Care</h1>
-        <p class="hero-par">
-          Can't remember the last time you talked with a patient without focusing on the EMR?
-          Canvas lets you rediscover joy in the work you do.
-          Capture meaningful data, identify gaps in care, and move seamlessly between tasks within the platform.
-          You stay present with patients while your whole care team stays up-to-speed.
-          Be a better doctor with Canvas, designed for primary care providers with the help of primary care providers.
+    <!-- Contact Form -->
+    <div class="row gray-text content">
+
+      <!-- Text Column -->
+      <div class="col-half contact-touch">
+        <h1 class="contact-heading">Get in touch with Canvas</h1>
+        <div class="contact-number">
+          <a href="">(800) 555-5555</a>
+        </div>
+        <p class="contact-par">
+          We would be delighted to show you a demo, put you in touch with current customers,
+          get you started with access to a sandbox, and answer any questions you have about
+          working with Canvas.
         </p>
-        <a href="contact-us.html">
-          <button class="get-started-button">Get Started</button>
-        </a>
+      </div>
+
+      <!-- Form Column -->
+      <div class="col-half">
+        <form action="" class="contact-form center-text">
+          <label>
+            <input type="text" name="contact-name" placeholder="Name" class="input-box center-text">
+          </label>
+          <label>
+            <input type="text" name="contact-name" placeholder="Practice Name" class="input-box center-text">
+          </label>
+          <label>
+            <input type="email" name="contact-name" placeholder="email@domain.com" class="input-box center-text">
+          </label>
+          <label>
+            <input type="tel" name="contact-name" placeholder="Phone (optional)" class="input-box center-text">
+          </label>
+
+          <label>
+            <textarea name="contact-more" cols="30" rows="3" class="input-box center-text">Tell us more about your practice and interest in Canvas. (optional)
+            </textarea>
+          </label>
+
+          <input type="submit" value="Submit" class="submit-button">
+        </form>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-full locations-box gray-text gray-background">
-        <div class="row">
-          <div class="col-full endorse">
-            <h2>Clinicians Prefer Canvas</h2>
-            <p class="endorse-body">Physician-owned primary care practices across the country have already made Canvas the fabric of their care.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-half locations">
-            <div>Cascade Family Practice, Portland OR</div>
-            <div>Temescal Creek Medicine, Oakland CA</div>
-            <div>San Juan Healthcare, Friday Harbor WA</div>
-          </div>
-          <div class="col-half locations">
-            <div>Ward Medical Clinic, Bonifay FL</div>
-            <div>Caribou Medical, Towanda PA</div>
-            <div>Bay Tree Family Care, Red Bay AL</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- Get Started -->
     <hr>
-
     <div class="row">
       <div class="col-half ready gray-text">
         <h2 class="ready-heading">Ready to learn more?</h2>
@@ -86,6 +91,7 @@
       </div>
     </div>
 
+    <!-- Bottom -->
     <div class="row bottom-details">
       <div class="col-half contacts">
         <img src="images/logo-white.png" alt="Canvas logo" class="bottom-logo">
@@ -128,4 +134,5 @@
 
   </div>
 </body>
+
 </html>
