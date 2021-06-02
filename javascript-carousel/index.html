@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="carousel">
+      <div class="row">
+        <div class="col-10">
+          <button class="scroll-left fas fa-chevron-left"></button>
+        </div>
+        <div class="col-80 center-align">
+          <img src="images/001.png" alt="Bulbasoar" class="portrait">
+          <img src="images/004.png" alt="Charmander" class="portrait hidden">
+          <img src="images/007.png" alt="Squirtle" class="portrait hidden">
+          <img src="images/025.png" alt="Pikachu" class="portrait hidden">
+          <img src="images/039.png" alt="Jigglypuff" class="portrait hidden">
+          <div class="center-align">
+            <nav class="dot-bar">
+              <button class="dot fas fa-circle"></button>
+              <button class="dot far fa-circle"></button>
+              <button class="dot far fa-circle"></button>
+              <button class="dot far fa-circle"></button>
+              <button class="dot far fa-circle"></button>
+            </nav>
+          </div>
+        </div>
+        <div class="col-10">
+          <button class="scroll-right fas fa-chevron-right"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
