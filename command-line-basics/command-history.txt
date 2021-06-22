@@ -1,0 +1,337 @@
+    1  git config --global user.name "Joseph Nguyen"
+    2  git config --global user.email "josephtringuyen2@gmail.com"
+    3  git config --global --list
+    4  cd
+    5  cd repos
+    6  ls
+    7  cd c0521-code-solutions/
+    8  git status
+    9  cd http-messages/
+   10  git status
+   11  git checkout -b http-messages
+   12  http http://example.com
+   13  http --verbose http://example.com
+   14  http -v http://example.com
+   15  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   16  http -v GET http://example.com
+   17  http -b GET http://example.com
+   18  http -b GET http://example.com > index.html
+   19  git status
+   20  git add ./
+   21  git status
+   22  git commit -m "completed http-messages"
+   23  git push origin http-messages 
+   24  git checkout master
+   25  cd ../
+   26  git pull origin master
+   27  git checkout -b javascript-ajax
+   28  cd javascript-ajax
+   29  git status
+   30  git add ./
+   31  git status
+   32  git commit -m "completed javascript-ajax"
+   33  git push origin javascript-ajax 
+   34  git checkout master
+   35  git pull origin master
+   36  cd ../
+   37  git pull origin master
+   38  cd repos
+   39  cd ajax-project/
+   40  git status
+   41  git add .
+   42  git status
+   43  git commit -m "Assign the event data to data.days."
+   44  git push origin issue-4-add-events 
+   45  git status
+   46  git add .
+   47  git status
+   48  git commit -m "Populate the checklist with the event data."
+   49  git push origin issue-4-add-events 
+   50  git status
+   51  git add .
+   52  git commit -m "Order events in the checklist."
+   53  git push origin issue-4-add-events 
+   54  git status
+   55  git add .
+   56  git commit -m "fixed bugs and improved user experience in the event modal"
+   57  git push origin issue-4-add-events 
+   58  git status
+   59  git add .
+   60  git status
+   61  git commit -m "more bug fixes"
+   62  git add .
+   63  git commit -m "more bug fixes"
+   64  git add .
+   65  git commit -m "more bug fixes"
+   66  git status
+   67  git add .
+   68  git commit -m "Update the code to enable edits to events."
+   69  git status
+   70  git add .
+   71  git commit -m "bug fix"
+   72  git push origin issue-4-add-events 
+   73  git status
+   74  git add .
+   75  git commit -m "Add a delete button to the event modal."
+   76  git push origin issue-4-add-events 
+   77  git status
+   78  git add .
+   79  git commit -m "Update the code to enable event deletion."
+   80  git add .
+   81  git commit -m "Update the code to enable event deletion."
+   82  git status
+   83  git add .
+   84  git commit -m "general bug fixes and cleaned up code"
+   85  git push origin issue-4-add-events 
+   86  git status
+   87  git add .
+   88  git commit -m "removed old comments in the handleTravelSubmit"
+   89  git push origin issue-4-add-events 
+   90  git checkout master
+   91  git pull origin master
+   92  git checkout -b issue-5-check-off-events
+   93  git status
+   94  git add .
+   95  git commit -m "Update the checklist handler to check for pressing the radio button."
+   96  git push origin issue-5-check-off-events 
+   97  git status
+   98  git add .
+   99  git commit -m "Change the state of the CalendarEvent object when the radio button is pressed."
+  100  git status
+  101  git add .
+  102  git commit -m "Update the checklist loader to account for whether or not an event is checked."
+  103  git status
+  104  git add .
+  105  git commit -m "cleaned up some design"
+  106  git push origin issue-5-check-off-events 
+  107  git status
+  108  git add .
+  109  git commit -m "removed autofilling functionality of birthday events"
+  110  git push origin issue-5-check-off-events 
+  111  git status
+  112  git add .
+  113  git commit -m "added styling to the time DDMs in the event modal"
+  114  git push origin issue-5-check-off-events 
+  115  git status
+  116  git add .
+  117  git commit -m "days can now be selected by clicking anywhere on the square"
+  118  git push origin issue-5-check-off-events 
+  119  git status
+  120  git add js/
+  121  git commit -m "fixed bug where consecutive travel days were not appearing the same color"
+  122  git push origin issue-5-check-off-events 
+  123  git status
+  124  gi add js/
+  125  git add js/
+  126  git commit -m "changing travel back to the hometown will remove travel info from the calendar"
+  127  git status
+  128  git add .
+  129  git commit -m "holidays will now load on the calendar in desktop view"
+  130  git status
+  131  git add .
+  132  git commit -m "cleaned up some code"
+  133  git push origin issue-5-check-off-events 
+  134  git status
+  135  git add js/
+  136  git commit -m "swapped out weather API key and made some final bug fixes"
+  137  git push origin issue-5-check-off-events 
+  138  git status
+  139  git add js
+  140  git status
+  141  git commit -m "minor change for improved code readability"
+  142  git push origin issue-5-check-off-events 
+  143  git status
+  144  git add .
+  145  git commit -m "added more clarity to code surrounding currentTravel.style[7]"
+  146  git push origin issue-5-check-off-events 
+  147  git status
+  148  git add js/
+  149  git commit -m 
+  150  git commit -m "cleaned up code"
+  151  git push origin issue-5-check-off-events 
+  152  git add .
+  153  git commit -m "fixed bug in a condition"
+  154  git push origin issue-5-check-off-events 
+  155  git checkout master
+  156  git pull origin master
+  157  git checkout -b polish
+  158  git status
+  159  git add index.html 
+  160  git status
+  161  git commit -m "updated site title and logo"
+  162  git status
+  163  git add js/
+  164  git commit -m "renamed an event handler for consistency"
+  165  git status
+  166  git add .
+  167  git commit -m "added code to account for landscape on a mobile device"
+  168  git status
+  169  git add .
+  170  git commit -m "added styling while hovering over certain buttons"
+  171  git push origin polish 
+  172  git status
+  173  git add .
+  174  git commit -m "removed landscape counter-rotation"
+  175  git add .
+  176  git commit -m "removed landscape counter-rotation"
+  177  git status
+  178  git add .
+  179  git commit -m "added smoother media transitions"
+  180  git push origin polish 
+  181  git checkout master
+  182  git pull origin master
+  183  git checkout -b gsap-transitions
+  184  git status
+  185  git add index.html 
+  186  git commit -m "added GSAP to HTML"
+  187  git status
+  188  git add js/
+  189  git commit -m "added animations for loading and unloading modals"
+  190  git status
+  191  git add js/
+  192  git commit -m "modal forms now accept enter keypress"
+  193  git status
+  194  git add js/
+  195  git commit -m "added transitions for moving left and right on the calendar"
+  196  git status
+  197  git add .
+  198  git commit -m "added transitions to day banner"
+  199  git status
+  200  git add js/
+  201  git commit -m "fixed entering for modals"
+  202  git push origin gsap-transitions 
+  203  git status
+  204  git add js/
+  205  git commit -m "rearranged code for better readability"
+  206  git push origin gsap-transitions 
+  207  git checkout master
+  208  git pull origin master
+  209  git checkout -b polish-2
+  210  git status
+  211  git add .
+  212  git commit -m "Hovering over arrows now turn them solid"
+  213  git status
+  214  git add .
+  215  git commit -m "event-delete button now turns red on hover"
+  216  git status
+  217  git add css/
+  218  git commit -m "centered modal header buttons"
+  219  git status
+  220  git add css/
+  221  git commit -m "none button is now more clearly active"
+  222  git push origin polish-2 
+  223  git status
+  224  git add .
+  225  git commit -m "travel destination now appears on the day banner"
+  226  git push origin polish-2 
+  227  git add js/
+  228  git commit -m "condensed Date instantiation while making today object from 3 to 1"
+  229  git push origin polish-2 
+  230  git status
+  231  git add .
+  232  git commit -m "removed nested children from code and replaced with query selectors"
+  233  git push origin polish-2 
+  234  git checkout master
+  235  git pull origin master
+  236  cd
+  237  cd repos/code-journal/
+  238  git checkout -b polish
+  239  git status
+  240  git add .
+  241  git commit -m "added styling to buttons while hovered"
+  242  git push origin polish 
+  243  cd
+  244  cd repos
+  245  cd c0521-code-solutions/
+  246  git checkout -b cs6-const-let
+  247  git branch -m es6-const-let
+  248  git status
+  249  git add .
+  250  git commit -m "completed es6-const-let"
+  251  git push origin es6-const-let 
+  252  git checkout master
+  253  git pull origin master
+  254  git checkout -b es6-template-literals
+  255  git status
+  256  git add es6-template-literals/
+  257  git commit -m "completed es6-template-literals"
+  258  git push origin es6-template-literals 
+  259  git status
+  260  git checkout master
+  261  git pull origin master
+  262  git checkout -b es6-destructuring
+  263  git status
+  264  git add es6-destructuring/
+  265  git commit -m "completed es6-destructuring"
+  266  git push origin es6-destructuring 
+  267  git checkout master
+  268  git pull origin master
+  269  git checkout -b es6-arrow-functions
+  270  git status
+  271  git add es6-arrow-functions/
+  272  git commit -m "completed es6-arrow-functions"
+  273  git push origin es6-arrow-functions 
+  274  git checkout master
+  275  git pull origin master
+  276  git checkout -b command-line-basics
+  277  cd command-line-basics/
+  278  pwd
+  279  man man
+  280  man cat
+  281  cat laziness.txt 
+  282  cat impatience.txt 
+  283  cat hubris.txt 
+  284  man cat
+  285  cat laziness.txt impatience.txt hubris.txt 
+  286  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  287  cat three-virtues.txt 
+  288  man ls
+  289  ls
+  290  ls -a
+  291  ls -F
+  292  man ls
+  293  ls lfz-staff/
+  294  ls -aF lfz-staff
+  295  ls -aF lfz-staff > lfz-staff/contents.txt
+  296  cat lfz-staff/contents.txt 
+  297  man pwd
+  298  pwd
+  299  pwd > i-was-here.txt
+  300  ls
+  301  cat i-was-here.txt 
+  302  man echo
+  303  echo 'Hello, World!'
+  304* man echo 
+  305  echo 'Hello, World!' > hello.txt
+  306  ls
+  307  cat hello.txt
+  308  man touch
+  309  touch tag-youre-it.txt
+  310  touch snoot/boop.txt
+  311  ls snoot/
+  312  man mkdir
+  313  mkdir parent
+  314  ls
+  315  mkdir -p parent/child/grandchild
+  316  ls parent/
+  317  ls parent/child/
+  318  touch parent/child/grandchild/.gitkeep
+  319  ls parent/child/grandchild/
+  320  ls -a parent/child/grandchild/
+  321  man mv
+  322  mv pokiemans/ pokemon
+  323  ls
+  324  man rm
+  325  cat lol.txt 
+  326  rm lol.txt 
+  327  ls
+  328  cat lol.txt 
+  329  rm -r kill-me/
+  330  ls
+  331  man cp
+  332  cp and-then.txt no-and-then.txt
+  333  cat and-then.txt 
+  334  cat no-and-then.txt 
+  335  man history
+  336  history
+  337  history > command-history.txt
