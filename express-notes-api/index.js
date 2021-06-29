@@ -1,14 +1,7 @@
-const express = require('express');
+const data = require('./data.json');
 const fs = require('fs');
+const express = require('express');
 const app = express();
-let data = {};
-
-fs.readFile('data.json', (err, dataFile) => {
-  if (err) {
-    console.error(err);
-  }
-  data = JSON.parse(dataFile);
-});
 
 app.use(express.json());
 
