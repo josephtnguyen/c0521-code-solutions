@@ -23,7 +23,7 @@ app.get('/api/grades', (req, res) => {
         res.json(result.rows);
       }, err => {
         console.error(err);
-        res.status(500).send('Error: an unexpected error has occurred');
+        res.status(500).send({ error: 'an unexpected error has occured' });
       }
     );
 });
@@ -34,18 +34,18 @@ app.post('/api/grades/', (req, res) => {
   const score = req.body.score;
   const scoreInt = parseInt(score);
   if (!name) {
-    res.status(400).send('Error: name is missing');
+    res.status(400).send({ error: 'name is missing' });
     return;
   }
   if (!course) {
-    res.status(400).send('Error: course is missing');
+    res.status(400).send({ error: 'course is missing' });
     return;
   }
   if (!score) {
-    res.status(400).send('Error: score is missing');
+    res.status(400).send({ error: 'score is missing' });
     return;
   } else if (!Number.isInteger(scoreInt) || scoreInt < 0 || scoreInt > 100) {
-    res.status(400).send(`Error: ${score} is not a valid score`);
+    res.status(400).send({ error: `${score} is not a valid score` });
     return;
   }
 
@@ -63,7 +63,7 @@ app.post('/api/grades/', (req, res) => {
         res.status(201).json(added);
       }, err => {
         console.error(err);
-        res.status(500).send('Error: an unexpected error has occurred');
+        res.status(500).send({ error: 'an unexpected error has occured' });
       }
     );
 });
@@ -76,22 +76,22 @@ app.put('/api/grades/:gradeId', (req, res) => {
   const gradeId = req.params.gradeId;
   const gradeIdInt = parseInt(gradeId);
   if (!name) {
-    res.status(400).send('Error: name is missing');
+    res.status(400).send({ error: 'name is missing' });
     return;
   }
   if (!course) {
-    res.status(400).send('Error: course is missing');
+    res.status(400).send({ error: 'course is missing' });
     return;
   }
   if (!score) {
-    res.status(400).send('Error: score is missing');
+    res.status(400).send({ error: 'score is missing' });
     return;
   } else if (!Number.isInteger(scoreInt) || scoreInt < 0 || scoreInt > 100) {
-    res.status(400).send(`Error: ${score} is not a valid score`);
+    res.status(400).send({ error: `${score} is not a valid score` });
     return;
   }
   if (!Number.isInteger(gradeIdInt) || gradeIdInt < 1) {
-    res.status(400).send('Error: gradeId should be a positive integer');
+    res.status(400).send({ error: 'gradeId should be a positive integer' });
     return;
   }
 
@@ -112,11 +112,11 @@ app.put('/api/grades/:gradeId', (req, res) => {
         if (added) {
           res.json(added);
         } else {
-          res.status(404).send(`Error: no grade exists with the gradeId ${gradeId}`);
+          res.status(404).send({ error: `no grade exists with the gradeId ${gradeId}` });
         }
       }, err => {
         console.error(err);
-        res.status(500).send('Error: an unexpected error has occurred');
+        res.status(500).send({ error: 'an unexpected error has occured' });
       }
     );
 });
@@ -125,7 +125,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
   const gradeId = req.params.gradeId;
   const gradeIdInt = parseInt(gradeId);
   if (!Number.isInteger(gradeIdInt) || gradeIdInt < 1) {
-    res.status(400).send('Error: gradeId should be a positive integer');
+    res.status(400).send({ error: 'gradeId should be a positive integer' });
     return;
   }
   const sql = `
@@ -142,11 +142,11 @@ app.delete('/api/grades/:gradeId', (req, res) => {
         if (deleted) {
           res.sendStatus(204);
         } else {
-          res.status(404).send(`Error: no grade exists with the gradeId ${gradeId}`);
+          res.status(404).send({ error: `no grade exists with the gradeId ${gradeId}` });
         }
       }, err => {
         console.error(err);
-        res.status(500).send('Error: an unexpected error has occurred');
+        res.status(500).send({ error: 'an unexpected error has occured' });
       }
     );
 });
