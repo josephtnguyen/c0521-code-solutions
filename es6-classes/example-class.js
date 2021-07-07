@@ -1,7 +1,5 @@
 class ExampleClass {
-  contructor() {
 
-  }
 }
 
 const example = new ExampleClass();
