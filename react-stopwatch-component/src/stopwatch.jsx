@@ -5,9 +5,8 @@ export default class StopWatch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isPaused: true,
       seconds: 0,
-      timer: 0
+      timer: null
     };
     this.handlePlay = this.handlePlay.bind(this);
     this.handleReset = this.handleReset.bind(this);
@@ -15,21 +14,20 @@ export default class StopWatch extends React.Component {
   }
 
   handlePlay(e) {
-    if (this.state.isPaused) {
+    if (!this.state.timer) {
       this.setState({
-        isPaused: false,
         timer: setInterval(this.tick, 1000)
       });
     } else {
       clearInterval(this.state.timer);
       this.setState({
-        isPaused: true
+        timer: null
       });
     }
   }
 
   handleReset(e) {
-    if (!this.state.isPaused) {
+    if (this.state.timer) {
       return;
     }
     this.setState({
@@ -44,7 +42,7 @@ export default class StopWatch extends React.Component {
   }
 
   render() {
-    const { seconds, isPaused } = this.state;
+    const { seconds, timer } = this.state;
     return (
       <div className="stopwatch">
         <button className="timer" onClick={this.handleReset}>
@@ -53,7 +51,7 @@ export default class StopWatch extends React.Component {
           </p>
         </button>
         <button className='play-button' onClick={this.handlePlay}>
-          <PlayIcon isPaused={isPaused} />
+          <PlayIcon isPaused={timer === null} />
         </button>
       </div>
     );
