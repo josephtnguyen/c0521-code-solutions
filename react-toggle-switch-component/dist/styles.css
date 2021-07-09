@@ -1,0 +1,43 @@
+.container {
+  font-family: Verdana, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  transition: all 0.125s;
+}
+
+.switch.off {
+  left: 0;
+}
+
+.switch.on {
+  left: 20px;
+}
+
+.toggle-switch-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  width: 40px;
+  padding: 0;
+  margin: 1rem;
+  text-align: left;
+}
+
+.toggle-switch-container.off {
+  background-color: lightgray;
+}
+
+.toggle-switch-container.on {
+  background-color: #6aa84f;
+}
