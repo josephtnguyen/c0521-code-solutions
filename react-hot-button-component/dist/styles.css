@@ -1,0 +1,39 @@
+.hot-button {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.hot-button:active {
+  transform: translateY(1px);
+}
+
+.cold {
+  color: white;
+  background-color: #351c75;
+}
+
+.lukewarm {
+  color: white;
+  background-color: #674ea7;
+}
+
+.warm {
+  color: white;
+  background-color: #e06666;
+}
+
+.hot {
+  color: black;
+  background-color: #f6b26b;
+}
+
+.hotter {
+  color: black;
+  background-color: #ff0;
+}
+
+.hottest {
+  color: black;
+  background-color: white;
+}
