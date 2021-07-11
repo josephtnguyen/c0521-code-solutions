@@ -16,11 +16,6 @@ body {
   width: 100%;
   height: 100vh;
   background-color: rgba(41, 41, 41, 0.7);
-  transition: background-color 0.25s ease;
-}
-
-.menu-background.opaque {
-  background-color: rgba(41, 41, 41, 0);
 }
 
 .menu {
