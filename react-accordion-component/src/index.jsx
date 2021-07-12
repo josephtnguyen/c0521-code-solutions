@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Accordian from './accordian';
+import Accordion from './accordion';
 const languages = [
   {
     id: 1,
@@ -20,6 +20,6 @@ const languages = [
 ];
 
 ReactDOM.render(
-  <Accordian items={languages} />,
+  <Accordion items={languages} />,
   document.querySelector('#root')
 );
