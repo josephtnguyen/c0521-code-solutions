@@ -19,11 +19,11 @@ body {
   margin: 0 0.5rem;
 }
 
-.fa.fa-check {
+.green {
   color: green;
 }
 
-.fa.fa-times {
+.red {
   color: red;
 }
 
