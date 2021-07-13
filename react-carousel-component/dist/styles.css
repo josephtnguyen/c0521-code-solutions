@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  width: 600px;
+  height: 400px;
+  margin: 2rem auto;
+  border: 2px solid black;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.arrow-button {
+  font-size: 40px;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.arrow-button:hover {
+  background-color: lightgray;
+  box-shadow: 1px 1px 2px 2px gray;
+  cursor: pointer;
+}
+
+.left {
+  position: absolute;
+  left: 1rem;
+}
+
+.right {
+  position: absolute;
+  right: 1rem;
+}
+
+.image {
+  height: 75%;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin: 0.5rem auto;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.dot:hover {
+  cursor: pointer;
+  color: lightgray;
+}
