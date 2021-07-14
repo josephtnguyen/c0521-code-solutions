@@ -33,8 +33,7 @@ export default class Carousel extends React.Component {
   }
 
   handleSelect(event) {
-    const $dot = event.target.closest('.dot');
-    const id = parseInt($dot.id);
+    const id = parseInt(event.target.id);
     const timeoutId = this.resetTimeout();
     this.setState({ showingIndex: id, timeoutId });
   }
