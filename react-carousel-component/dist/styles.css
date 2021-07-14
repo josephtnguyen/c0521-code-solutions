@@ -23,7 +23,6 @@ body {
   margin: 2rem auto;
   border: 2px solid black;
   position: relative;
-  overflow-y: hidden;
 }
 
 .arrow-button {

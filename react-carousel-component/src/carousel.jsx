@@ -12,7 +12,7 @@ export default class Carousel extends React.Component {
     this.resetTimeout = this.resetTimeout.bind(this);
     this.state = {
       showingIndex: 0,
-      timeoutId: 0
+      timeoutId: null
     };
   }
 
