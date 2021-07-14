@@ -7,11 +7,8 @@ function authorizationMiddleware(req, res, next) {
     throw new ClientError(401, 'athentication required');
   }
   const token = req.headers['x-access-token'];
-  try {
-    req.user = jwt.verify(token, process.env.TOKEN_SECRET);
-  } catch (err) {
-    console.log(err); //eslint-disable-line
-  }
+  req.user = jwt.verify(token, process.env.TOKEN_SECRET);
+
   next();
   /**
    * Try to get the 'X-Access-Token' from the req.headers.
