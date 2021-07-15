@@ -1,0 +1,57 @@
+When the user first opens the page, nothing is rendered in App.render() since App.state.isAuthorizing = true
+Afterwards in App.componentDidMount(), we check to see if a token is being stored in localStorage
+Then isAuthorizing is set to false and the page is rendered again through App.setState()
+
+Now, the NavBar and page is rendered, and since there is not path by default, the Home react element is rendered
+	App.state.user is passed as a context into Home
+	If a token was found (i.e. user is truthy)
+		Home renders a Rick Roll
+	If no token was found (i.e. user=null)
+		Home adds the hash #sign-in to the url
+		This triggers the hashchange event listener, which sets App.state.route to 'sign-in' rerenders the app
+
+Now that App.state.route='sign-in', the Auth page is rendered, prompting us to sign in or sign-up(Register now)
+	
+	
+#1 User can sign up
+
+When the user clicks the 'Register now' anchor from the AuthForm of the Auth page, the hash is set to '#sign-up'
+This triggers a rerender of the App which renders the same Auth page but with texts and links prompting a sign up and the prop action='sign-up'
+Once a username and password are filled in and the form is submitted, a POST method with the path '/api/auth/sign-up' is sent to the server with a JSON of AuthForm.state as the body
+	
+On the server side, an error is thrown if either the username or password are missing
+Else the password gets hashed, then a database query is sent, inserting the username and hashed password into the "users" table
+The query returns an object of the user created
+
+
+The response is parsed into a JS object, then the hash is set to #sign-in
+
+
+#2 User can sign in
+
+When a username and password is filled in and the form is submitted, a POST method with the path '/api/auth/sign-in' is sent to the server with a JSON of AuthForm.state as the body
+
+On the server side, an error is thrown if either the username or password are missing
+Then a database query is sent, selecting for the userId and hashedPassword of the username in the "users" table
+If no matching username was found, an error is thrown
+Else the returned hashedPassword is verified with the given password to see if they are matching
+	If they are not matching, an error is thrown
+	If they do match, an authorization token is made and sent to the client along with the username
+
+If a token and user are returned by the fetch, App.handleSignIn() from the context is called on the result
+The token gets stored in localStorage and App.state.user = user
+This triggers a rerender of the App, and when the Auth page is rendered, it will set the hash to '#'
+This rerenders the App again, but this time Home is rendered instead of Auth
+And since there is a user now, Home renders the Rick Roll
+
+
+#3 User can stay signed in (even if they refresh the page)
+
+Since the token is saved in localStorage, it is accessed in App.componentDidMount(), which updates App.state.user and grants access to the Rick Roll when Home is rendered
+
+
+#4 User can sign out
+
+In the NavBar is a Sign out button which triggers App.handleSignOut() when clicked
+The method removes the stored token from localStorage, and sets App.state.user=null
+This rerenders the App, which will now lead reroute to the sign-in page since user is no longer truthy
